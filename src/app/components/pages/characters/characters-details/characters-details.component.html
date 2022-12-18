@@ -1,1 +1,20 @@
-<p>characters-details works!</p>
+<div class="row justify-content-center mt-3" *ngIf="character$ | async as character">
+  <div class="col-xs-12 col-sm-6 col-md-6 justify-content-center">
+    <div class="card">
+      <img
+        [src]="character.previewURL"
+        class="card-img-top"
+      />
+      <div class="card-body">
+        <h5 class="card-title">{{ character.user }}</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+    </div>
+    <button
+    class="btn btn-primary btn-lg mt-3"
+    (click)="onGoBack()"
+    >
+    Back
+    </button>
+  </div>
+</div>

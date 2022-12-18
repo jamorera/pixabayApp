@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
       type="search"
       placeholder="Search"
       aria-label="Search"
-      (keyup)="onSearch(inputSearch.value)"
+      (keyup.enter)="onSearch(inputSearch.value)"
     />
   `,
   styles: ['input{width:100%}']
@@ -19,10 +19,11 @@ export class FormSearchComponent {
   constructor(private router:Router){}
   onSearch(value: string){
     if (value && value.length > 3) {
-      console.log('buscar->',value)
       this.router.navigate(['/character-list'],{
         queryParams:{q:value}
       })
+    }else{
+      this.router.navigate(['/character-list'])
     }
   }
 }

@@ -10,11 +10,16 @@ export class CharacterService {
 
   constructor(private http:HttpClient) { }
 
-  searchCharacters(query='',page=1){
+  searchCharacters(query=''){
     const filter = `${environment.baseUrlAPI}/&lang=es&q=${query}`;
     return this.http.get<Character[]>(filter);
   }
   getDetails(id:number){
     return this.http.get<Character>(`${environment.baseUrlAPI}/&id=${id}`);
+  }
+
+  categoryCharacters(category=''){
+    const filter = `${environment.baseUrlAPI}&category=${category}`;
+    return this.http.get<Character[]>(filter);
   }
 }

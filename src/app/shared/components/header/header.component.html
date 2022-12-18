@@ -11,21 +11,38 @@
           <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link"
+          (click)="onClick('science')"
+          >Science</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
+          <a class="nav-link"
+          (click)="onClick('education')"
+          >Education</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
+        <li class="nav-item">
+          <a class="nav-link"
+          (click)="onClick('people')"
+          >People</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"
+          (click)="onClick('feelings')"
+          >Feelings</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"
+          (click)="onClick('computer')"
+          >Computer</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"
+          (click)="onClick('buildings')"
+          >Buildings</a>
         </li>
       </ul>
       <app-form-search></app-form-search>
     </div>
   </div>
 </nav>
+

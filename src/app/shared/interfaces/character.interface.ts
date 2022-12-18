@@ -3,5 +3,6 @@ export interface Character{
   tags:[],
   previewURL:string,
   views:number,
-  likes:number
+  likes:number,
+  user:string
 }

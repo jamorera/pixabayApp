@@ -19,7 +19,6 @@ export class CharactersDetailsComponent {
   ngOnInit(): void {
     this.route.params.pipe( take(1)).subscribe((params) => {
       const id = params['id'];
-      // this.character$ = this.characterSvc.getDetails(id);
       this.characterSvc.getDetails(id).subscribe((res:any )=>{
         this.character$ = of(res['hits'][0]);
       });

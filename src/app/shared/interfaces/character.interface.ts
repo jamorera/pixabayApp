@@ -4,5 +4,6 @@ export interface Character{
   previewURL:string,
   views:number,
   likes:number,
-  user:string
+  user:string,
+  comments:number
 }

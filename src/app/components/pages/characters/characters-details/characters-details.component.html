@@ -6,8 +6,20 @@
         class="card-img-top"
       />
       <div class="card-body">
-        <h5 class="card-title">{{ character.user }}</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <div class="row align-items-start">
+          <h3 class="card-title">{{ character.user.toUpperCase() }}</h3>
+          <div class="col">
+            <p class="Card-text"><i class="fa-solid fa-comments"></i> {{ character.comments }}</p>
+            <p class="card-text"><i class="fa-solid fa-eye"></i> {{ character.views }}</p>
+            <p class="card-text"><i class="fa-solid fa-thumbs-up"></i> {{ character.likes }}</p>
+          </div>
+          <div class="col">
+            <h5>Etiquetas</h5>
+            <p>{{ character.tags.split(',')[0] }} <br></p>
+            <p>{{ character.tags.split(',')[1] }} <br></p>
+            <p>{{ character.tags.split(',')[2] }}</p>
+          </div>
+        </div>
       </div>
     </div>
     <button
